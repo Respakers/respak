@@ -19,7 +19,7 @@ def attribute_choser(json_data):
                 used_attributes.append(str(attribute))
             elif chosen == "2":
                 print("Атрибут не использован")
-            else:
+            elif chosen != "3":
                 print("Неправильный формат ввода!")
         if chosen == "3":
             print("Выбор закончен")

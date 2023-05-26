@@ -5,14 +5,14 @@ import geopandas as gps
 
 
 
-def shape_to_geojson(self):
+def shape_to_geojson(work_directory, file_name):
     # Чтение файлов из шейпа и перевод их в GeoJson
     # try:
-    #     zipfile = self.path + self.file_name + "." + self.form
+    #     zipfile = path + file_name + "." + form
     #     file = gps.read_file(zipfile)
-    #     file.to_file(self.work_directory + self.file_name + '.geojson', driver='GeoJSON',
+    #     file.to_file(work_directory + file_name + '.geojson', driver='GeoJSON',
     #                  encoding='utf-8')
-    #     print("Данные успешно переведены по пути " + self.work_directory + self.file_name + ".geojson")
+    #     print("Данные успешно переведены по пути " + work_directory + file_name + ".geojson")
     #
     # except EOFError as e:
     #     print(e)
@@ -21,7 +21,7 @@ def shape_to_geojson(self):
     # Чтение данных из GeoJson
 
     try:
-        file_json = codecs.open(self.work_directory + self.file_name + '.geojson', "r",
+        file_json = codecs.open(work_directory + file_name + '.geojson', "r",
                                    "utf_8_sig")
         json_read = file_json.read()
         file_json.close()
